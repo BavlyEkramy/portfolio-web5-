@@ -1,0 +1,99 @@
+#flow {
+  position: relative;
+  height: 40vh;
+  /* background-color: rgb(114, 114, 114); */
+  background-image: linear-gradient(to left bottom, #883939,#111, #314164);
+}
+#flow .flow-submit {
+  background-color: #ffffffb9;
+  width: 60%;
+  height: auto;
+  border-radius: 55px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#flow .flow-submit p {
+  width: 300px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#flow .submit {
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#flow .submit input {
+  width: 300px;
+  height: 70px;
+  border-radius: 15px;
+  border: 0px;
+  outline: none;
+  padding: 20px 120px 20px 20px;
+}
+#flow .submit a {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(0%, -50%);
+  border-radius: 15px;
+  color: white;
+  padding: 10px 15px;
+  background-image: linear-gradient(to right top, #b42f2ff5, #1a3cd4d8);
+}
+.heart {
+  color: rgb(235, 62, 62);
+  font-size: 20px;
+  margin-left: 5px;
+}
+#flow img {
+  position: absolute;
+  width: 200px;
+  bottom: 10%;
+  left: 2%;
+}
+#flow .flow-icon {
+  position: absolute;
+  bottom: 4%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  #flow {
+    height: 46vh;
+  }
+  #flow .flow-submit {
+    width: 90%;
+  }
+  #flow .flow-submit p {
+    font-size: 1.3rem;
+  }
+  #flow .submit input {
+    width: 270px;
+    height: 60px;
+  }
+}
+@media (max-width: 600px) {
+  #flow .flow-submit p {
+    font-size: 1.2rem;
+  }
+  #flow img {
+    position: absolute;
+    width: 200px;
+    bottom: 20%;
+    left: 2%;
+  }
+}

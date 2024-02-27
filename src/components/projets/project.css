@@ -1,0 +1,45 @@
+#project {
+  /* background-color: rgba(238, 204, 173, 0.733); */
+  background-color: #111;
+
+  padding-top: var(--size);
+  padding-bottom: 30px;
+}
+.project-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+}
+.project-links a {
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  color: antiquewhite;
+}
+/* .project-links a:focus:before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 90%;
+  top: 90%;
+  left: 10%;
+  background-image: linear-gradient(to right top, #9c4242c7, #3a4c9cce);
+  border-radius: 50%;
+  transform: rotateX(70deg);
+} */
+#project .proj-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(175, 175, 175);
+}
+
+@media (max-width: 600px) {
+  .project-links {
+    gap: 30px;
+  }
+  .project-links a {
+    font-size: 1rem;
+  }
+}
