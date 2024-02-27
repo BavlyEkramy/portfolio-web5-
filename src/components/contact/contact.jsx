@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./contact.css";
 import { useRef } from "react";
 
@@ -19,9 +19,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="contact-img">
-        <img src="./assets/l2.png" className="photo" />
-      </div>
+      <img src="./assets/l2.png" className="contact-img" alt="" />
       <div className="contact-items">
         <h2 className="title">get in touch</h2>
         <form>

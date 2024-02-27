@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './icon.css';
+import "./icon.css";
 const Icons = () => {
   return (
     <nav className="icons-links">

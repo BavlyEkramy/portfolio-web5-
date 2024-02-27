@@ -1,11 +1,10 @@
 #flow {
   position: relative;
   height: 40vh;
-  /* background-color: rgb(114, 114, 114); */
   background-image: linear-gradient(to left bottom, #883939,#111, #314164);
 }
 #flow .flow-submit {
-  background-color: #ffffffb9;
+  background-color: #ffffffe0;
   width: 60%;
   height: auto;
   border-radius: 55px;

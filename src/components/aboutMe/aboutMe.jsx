@@ -1,27 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./aboutMe.css";
 import TypeIt from "typeit-react";
 
 const AboutMe = ({ flag, color }) => {
-  const [style1, setStyle1] = useState(
-    flag
-      ? {}
-      : {
-          animationName: "about",
-          height: "0px",
-          width: "100%",
-          padding: "0px 5%",
-          backgroundColor: "#111",
-        }
-  );
+  const style1 = flag
+    ? {}
+    : {
+        animationName: "about",
+        height: "0px",
+        width: "100%",
+        padding: "0px 5%",
+        backgroundColor: "#111",
+      };
 
-  const [style2, setStyle2] = useState(
-    flag
-      ? {}
-      : {
-          textAlign: "center",
-        }
-  );
+  const style2 = flag
+    ? {}
+    : {
+        textAlign: "center",
+      };
   return (
     <div className="aboutMe" style={{ ...style1, color: "white" }}>
       {" "}

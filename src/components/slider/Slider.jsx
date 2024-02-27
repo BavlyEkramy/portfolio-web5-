@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./slider.css";
+import { memo } from "react";
 
 const Slider = () => {
   const StylesSkills = [
@@ -50,25 +51,23 @@ const Slider = () => {
     },
   ];
   const [slideIndex, setSlideIndex] = useState(0);
-  const [NumSlides, setNumSlides] = useState(window.innerWidth > 600 ? 3 : 2); //   Number of slides
-  const [slides, setSlides] = useState(
-    document.getElementsByClassName("mySlides")
-  );
+  const [NumSlides, setNumSlides] = useState(window.innerWidth > 600 ? 3 : 2);  
+  const slides = document.getElementsByClassName("mySlides");
 
   useEffect(() => {
     console.log(NumSlides, window.innerWidth);
   }, [NumSlides]);
 
-  const plusSlides = () => {
+  const plusSlides = useCallback(() => {
     setSlideIndex(slideIndex + 1);
-  };
-  const minusSlides = () => {
+  }, [slideIndex]);
+  const minusSlides = useCallback(() => {
     setSlideIndex(slideIndex - 1);
-  };
+  }, [slideIndex]);
 
   useEffect(() => {
     setNumSlides(
-      window.innerWidth > 1100 ? 4 : window.innerWidth > 600 ? 3 : 2
+      window.innerWidth > 1100 ? 4 : window.innerWidth > 600 ? 3 : 2   //   Number of slides
     );
     if (slideIndex > slides.length - NumSlides) {
       setSlideIndex(slides.length - NumSlides);
@@ -82,14 +81,14 @@ const Slider = () => {
     for (let i = 0; i < NumSlides; i++) {
       slides[(slideIndex + i) % slides.length].style.display = "block";
     }
-  }, [plusSlides, minusSlides]);
+  }, [plusSlides, minusSlides, slideIndex, slides, NumSlides]);
 
   return (
     <section id="section-skills">
-      <div className="skills">
+      <div className="skills" id="skill">
         <h2 className="title"> Skills </h2>
         <div className="slideshow-container">
-          {StylesSkills.map((skill,id) => (
+          {StylesSkills.map((skill, id) => (
             <div
               key={id}
               className={skill.percent < 50 ? "mySlides less" : "mySlides"}
@@ -104,17 +103,16 @@ const Slider = () => {
               <h4>{skill.skillName}</h4>
             </div>
           ))}
-
-          <a className="prev" onClick={minusSlides}>
+          <p className="prev" onClick={minusSlides}>
             ❮
-          </a>
-          <a className="next" onClick={plusSlides}>
+          </p>
+          <p className="next" onClick={plusSlides}>
             ❯
-          </a>
+          </p>
         </div>
       </div>
     </section>
   );
 };
 
-export default Slider;
+export default memo(Slider);

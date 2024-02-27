@@ -2,7 +2,6 @@
   position: relative;
 }
 .skills {
-  /* background-color: #4f5f77a8; */
   background-image: linear-gradient(to right top, #9c4242c7, #3a4c9cce);
   width: 80%;
   border-radius: 55px;
@@ -108,18 +107,16 @@
   .slideshow-container .mySlides h3 {
     font-size: 1.6rem;
   }
-
   .slideshow-container .mySlides h4 {
     font-size: 0.8rem;
   }
-
   .slideshow-container .mySlides::after {
     inset: 10px;
   }
 }
-
 @media (max-width: 600px) {
   .skills {
     border-radius: 50px;
+    width: 90%;
   }
 }

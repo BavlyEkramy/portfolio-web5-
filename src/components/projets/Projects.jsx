@@ -19,7 +19,7 @@ const Projects = () => {
       <h2 className="title">Projects</h2>
       <p className="proj-title">my name is bavly , this is the 4th projects </p>
       <nav className="project-links">
-        <NavLink style={style1} to="/proj" ref={ref}>
+        <NavLink style={style1} to="/proj" ref={ref} id="proj">
           My projects
         </NavLink>
         <NavLink style={style1} to="/contact">

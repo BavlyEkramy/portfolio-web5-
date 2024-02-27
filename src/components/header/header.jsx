@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Icons from "../icons/Icons";
 import "./header.css";
 const Header = () => {
   const goSkills = () => {
-    window.location = "#section-skills";
+    window.location = "#skill";
   };
   const goHome = () => {
     window.location = "#home";
   };
   const goProjects = () => {
-    window.location = "#project";
+    window.location = "#proj";
   };
   const goContact = () => {
     window.location = "#contact";
@@ -19,12 +19,12 @@ const Header = () => {
   useEffect(() => {
     const head = document.querySelector(".header");
     const btnIcon = document.querySelector(".btnIcon");
-    const bti= btnIcon.getAttribute("aria-expanded")
+    const bti = btnIcon.getAttribute("aria-expanded");
     head.style.height = "60px";
     head.style.alignItems = "center";
     head.style.padding = "0px 5%";
 
-    if (con ) {
+    if (con) {
       head.style.height = "45vh";
       head.style.alignItems = "flex-start";
 
@@ -32,15 +32,10 @@ const Header = () => {
     }
   }, [con]);
 
-
   return (
     <header>
       <nav className="header  navbar navbar-expand-md navbar-dark ">
-        <img
-          className="logo"
-          src="./assets/logo.png"
-          alt=""
-        />
+        <img className="logo" src="./assets/logo.png" alt="" />
         <button
           className="navbar-toggler btnIcon"
           type="button"
